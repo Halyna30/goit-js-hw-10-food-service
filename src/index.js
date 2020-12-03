@@ -1,2 +1,4 @@
+import './js/templating.js';
 import './styles.css';
-console.log('hello, world');
+
+console.log('hello from index.js');
