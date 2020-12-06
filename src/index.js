@@ -15,7 +15,8 @@ const refs = {
 
 refs.checkbox.addEventListener('change', checkboxChange);
 
-function checkboxChange() {
+function checkboxChange(e) {
+  e.preventDefault();
   if (refs.body.classList.value === 'dark-theme') {
     refs.body.classList.remove(Theme.DARK);
     refs.body.classList.add(Theme.LIGHT);
@@ -26,9 +27,12 @@ function checkboxChange() {
 
   localStorage.setItem('Theme', refs.body.classList.value);
 }
+
 const savedTheme = localStorage.getItem('Theme');
 
-if (savedTheme) {
-  refs.body.classList.add(refs.body.classList.value);
+if (savedTheme !== 'dark-theme') {
+  refs.body.classList.add('light-theme');
+} else if (savedTheme !== 'light-theme') {
+  refs.body.classList.add('dark-theme');
+  refs.checkbox.setAttribute('checked', true);
 }
-console.log(savedTheme);
