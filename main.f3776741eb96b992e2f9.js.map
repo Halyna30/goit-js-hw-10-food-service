@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack:///./index.js"],"names":["console","log"],"mappings":"kHAAA,iBACAA,QAAQC,IAAI,kB","file":"main.f3776741eb96b992e2f9.js","sourcesContent":["import './styles.css';\r\nconsole.log('hello, world');\r\n"],"sourceRoot":""}
