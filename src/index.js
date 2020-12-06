@@ -17,7 +17,10 @@ refs.checkbox.addEventListener('change', checkboxChange);
 
 function checkboxChange(e) {
   e.preventDefault();
-  if (refs.body.classList.value === 'dark-theme') {
+  if (
+    !refs.body.classList.value ||
+    refs.body.classList.value === 'dark-theme'
+  ) {
     refs.body.classList.remove(Theme.DARK);
     refs.body.classList.add(Theme.LIGHT);
   } else {
